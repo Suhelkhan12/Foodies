@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Logo from '@/assets/logo.png'
 import classes from './header.module.css'
 
@@ -6,7 +7,7 @@ const Header = () => {
   return (
     <header className={classes.header}>
         <Link href="/" className={classes.logo}>
-            <img src={Logo.src} alt='meals logo for the navbar'/>
+            <Image src={Logo} alt='meals logo for the navbar' priority/>
             Foodies
         </Link>
 

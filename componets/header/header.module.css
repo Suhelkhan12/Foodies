@@ -49,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     text-decoration: none;
     color: #ddd6cb;
     font-weight: bold;
@@ -57,6 +57,11 @@
     letter-spacing: 0.15rem;
     text-transform: uppercase;
     font-size: 1.5rem;
+    transition: color .3s;
+  }
+
+  .logo:hover{
+    color:#fff
   }
   
   .logo img {
