@@ -4,7 +4,7 @@ import Footer from '@/componets/footer/Footer';
 import './globals.css';
 
 export const metadata = {
-  title: 'NextLevel Food',
+  title: 'Foodies',
   description: 'Delicious meals, shared by a food-loving community.',
 };
 

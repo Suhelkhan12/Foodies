@@ -7,7 +7,7 @@ const Footer = () => {
         <p>Made with {" "}
             <span>❤️</span>{" "}
             by{" "}
-            <Link href="https://github.com/Suhelkhan12" className={classes.github}>Suhel</Link>
+            <Link href="https://github.com/Suhelkhan12" target='blank' className={classes.github}>Suhel</Link>
         </p>
     </footer>
   )
