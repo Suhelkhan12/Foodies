@@ -1,12 +1,10 @@
-'use client'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Logo from '@/assets/logo.png'
 import classes from './header.module.css'
+import Navlink from '../navlink/Navlink'
 
 const Header = () => {
-  const path = usePathname();
   return (
     <header className={classes.header}>
         <Link href="/" className={classes.logo}>
@@ -17,14 +15,10 @@ const Header = () => {
         <nav className={classes.nav}>
             <ul>
                 <li>
-                    <Link href="/meals" className={
-                        path.startsWith('/meals') ? classes.active : undefined 
-                    }>Browse meals</Link>
+                    <Navlink href="/meals">Meals</Navlink>
                 </li>
                 <li>
-                    <Link href="/community" className={
-                        path.startsWith('/community') ? classes.active : undefined 
-                    }>Community</Link>
+                   <Navlink href="/community">Community</Navlink>
                 </li>
             </ul>
         </nav>

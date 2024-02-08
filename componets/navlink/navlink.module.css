@@ -1,0 +1,32 @@
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #ddd6cb;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all .3s;
+  }
+  
+  .nav a:hover,
+  .nav a:active {
+    background: linear-gradient(90deg, #ff8a05, #f9b331);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .active {
+    background: linear-gradient(90deg, #ff8a05, #f9b331);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
