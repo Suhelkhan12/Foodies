@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import classes from './page.module.css'
+import Meals from '@/componets/meals/Meals-grid'
 
 const page = () => {
   return (
@@ -11,7 +12,9 @@ const page = () => {
           <Link href="/meals/share">Share your recipe</Link>
         </p>
       </header>
-      <main className={classes.main}></main>
+      <main className={classes.main}>
+        <Meals meals={[]}/>
+      </main>
     </>
   )
 }
