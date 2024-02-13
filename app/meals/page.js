@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import classes from './page.module.css'
+import { getMeals } from '@/lib/meals'
 import Meals from '@/componets/meals/Meals-grid'
 
-const page = () => {
+const page = async () => {
+  // this is how we will fetch meals using db
+  const meals = await getMeals();
   return (
     <>
       <header className={classes.header}>
@@ -13,7 +16,7 @@ const page = () => {
         </p>
       </header>
       <main className={classes.main}>
-        <Meals meals={[]}/>
+        <Meals meals={meals}/>
       </main>
     </>
   )
