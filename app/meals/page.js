@@ -1,9 +1,8 @@
+import { Suspense } from 'react'
 import Link from 'next/link'
 import classes from './page.module.css'
 import { getMeals } from '@/lib/meals'
-import loadingClass from './loading.module.css'
 import Meals from '@/componets/meals/Meals-grid'
-import { Suspense } from 'react'
 
 async function MealsComponent(){
   // this is how we will fetch meals using db
@@ -23,12 +22,12 @@ const page = async () => {
         </p>
       </header>
       <main className={classes.main}>
-        <Suspense fallback={<p className={loadingClass.loading}>Fetching meals</p>}>
+        <Suspense fallback={<p className={classes.loading}>Fetching meals</p>}>
         <MealsComponent/>
         </Suspense>
       </main>
     </>
-  )
+  ) 
 }
 
 export default page
