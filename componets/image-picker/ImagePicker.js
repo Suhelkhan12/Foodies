@@ -13,12 +13,17 @@ const ImagePicker = ({label,name}) => {
          */
         const file = event.target.files[0];
 
+        if(!file){
+            setImage(null);
+            return;
+        }
+
         const fileReader = new FileReader();
 
         fileReader.onload = ()=>{
             setImage(fileReader.result)
         }
-        
+
         fileReader.readAsDataURL(file);
     }
 
@@ -34,7 +39,7 @@ const ImagePicker = ({label,name}) => {
                 {!image && <p>No image is picked</p> }
                 {image && <Image src={image} alt='Picked image by the user' fill/>}
             </div>
-            <input ref={imageInputRef} onChange={handleImagePicked} type="file" id={name} className={classes.input} accept='image/png, image/jpeg' name={name} />
+            <input ref={imageInputRef} onChange={handleImagePicked} type="file" id={name} className={classes.input} accept='image/png, image/jpeg' name={name} required />
             <button className={classes.button} type='button' onClick={handlePickButtonClick}>Pick an image</button>
         </div>
     </div>
