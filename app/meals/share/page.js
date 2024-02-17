@@ -1,3 +1,4 @@
+import ImagePicker from '@/componets/image-picker/ImagePicker';
 import classes from './page.module.css';
 
 export default function ShareMealPage() {
@@ -39,7 +40,7 @@ export default function ShareMealPage() {
               required
             ></textarea>
           </p>
-          IMAGE PICKER
+          <ImagePicker label="Add your meal image" name="image"/>
           <p className={classes.actions}>
             <button type="submit">Share Meal</button>
           </p>
