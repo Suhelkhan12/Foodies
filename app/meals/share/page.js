@@ -4,14 +4,22 @@ import classes from './page.module.css';
 export default function ShareMealPage() {
 
   // this is basically SERVER ACTION for form submission
-  async function shareMeal(){
+  async function shareMeal(formData){
     'use server';
 
-    const meal = {
-      title: formData.get('title'),
-      summary: formData.get('summary'),
-      instructions:formData.get('instructions'),
-      image: formData.get('image')     
+    try{
+      const meal = {
+        title: formData.get('title'),
+        summary: formData.get('summary'),
+        instructions:formData.get('instructions'),
+        image: formData.get('image'),
+        creator: formData.get('name'),
+        email: formData.get('email')     
+      }
+  
+      console.log(meal)
+    }catch(err){
+      console.log(err)
     }
   }
   
