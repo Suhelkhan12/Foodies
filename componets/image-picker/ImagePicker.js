@@ -39,7 +39,7 @@ const ImagePicker = ({label,name}) => {
                 {!image && <p>No image is picked</p> }
                 {image && <Image src={image} alt='Picked image by the user' fill/>}
             </div>
-            <input ref={imageInputRef} onChange={handleImagePicked} type="file" id={name} className={classes.input} accept='image/png, image/jpeg' name={name} required />
+            <input ref={imageInputRef} onChange={handleImagePicked} type="file" id={name} className={classes.input} accept='image/png, image/jpeg, image/webp' name={name} required />
             <button className={classes.button} type='button' onClick={handlePickButtonClick}>Pick an image</button>
         </div>
     </div>

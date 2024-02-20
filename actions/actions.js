@@ -1,4 +1,5 @@
 'use server';
+import { saveMeal } from "@/lib/meals";
 
 // this is basically SERVER ACTION for form submission
  export async function shareMeal(formData){
@@ -9,9 +10,10 @@
         instructions:formData.get('instructions'),
         image: formData.get('image'),
         creator: formData.get('name'),
-        email: formData.get('email')     
+        creator_email: formData.get('email')     
       }
   
+      await saveMeal(meal);
       console.log(meal)
     }catch(err){
       console.log(err)
