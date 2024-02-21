@@ -70,55 +70,7 @@ const dummyMeals = [
     `,
     creator: 'Emily Chen',
     creator_email: 'emilychen@example.com',
-  },
-  {
-    title: 'Classic Mac n Cheese',
-    slug: 'classic-mac-n-cheese',
-    image: '/images/macncheese.jpg',
-    summary:
-      "Creamy and cheesy macaroni, a comforting classic that's always a crowd-pleaser.",
-    instructions: `
-      1. Cook the macaroni:
-         Boil macaroni according to package instructions until al dente.
 
-      2. Prepare cheese sauce:
-         In a saucepan, melt butter, add flour, and gradually whisk in milk until thickened. Stir in grated cheese until melted.
-
-      3. Combine:
-         Mix the cheese sauce with the drained macaroni.
-
-      4. Bake:
-         Transfer to a baking dish, top with breadcrumbs, and bake until golden.
-
-      5. Serve:
-         Serve hot, garnished with parsley if desired.
-    `,
-    creator: 'Laura Smith',
-    creator_email: 'laurasmith@example.com',
-  },
-  {
-    title: 'Authentic Pizza',
-    slug: 'authentic-pizza',
-    image: '/images/pizza.jpg',
-    summary:
-      'Hand-tossed pizza with a tangy tomato sauce, fresh toppings, and melted cheese.',
-    instructions: `
-      1. Prepare the dough:
-         Knead pizza dough and let it rise until doubled in size.
-
-      2. Shape and add toppings:
-         Roll out the dough, spread tomato sauce, and add your favorite toppings and cheese.
-
-      3. Bake the pizza:
-         Bake in a preheated oven at 220°C for about 15-20 minutes.
-
-      4. Serve:
-         Slice hot and enjoy with a sprinkle of basil leaves.
-    `,
-    creator: 'Mario Rossi',
-    creator_email: 'mariorossi@example.com',
-  },
-  {
     title: 'Wiener Schnitzel',
     slug: 'wiener-schnitzel',
     image: '/images/schnitzel.jpg',

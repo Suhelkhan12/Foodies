@@ -1,4 +1,5 @@
 'use server';
+import { redirect } from "next/navigation";
 import { saveMeal } from "@/lib/meals";
 
 // this is basically SERVER ACTION for form submission
@@ -14,7 +15,7 @@ import { saveMeal } from "@/lib/meals";
       }
   
       await saveMeal(meal);
-      console.log(meal)
+      redirect('/meals');
     }catch(err){
       console.log(err)
     }
