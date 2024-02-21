@@ -46,4 +46,4 @@ const ImagePicker = ({label,name}) => {
   )
 }
 
-export default ImagePicker
+export default ImagePicker 
