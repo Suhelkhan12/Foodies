@@ -64,12 +64,7 @@
     color: #ddd6cb;
   }
   
-  .form input:focus,
-  .form textarea:focus {
-    outline-color: #f99f2a;
-    background-color: #1f252d;
-  }
-  
+
   .row {
     display: flex;
     gap: 1rem;

@@ -1,13 +1,11 @@
 'use server';
-import { redirect } from "next/navigation";
 import { saveMeal } from "@/lib/meals";
-
 function isInvalidText(text){
   return !text || text.trim() === ''
 }
 
 // this is basically SERVER ACTION for form submission
- export async function shareMeal(formData){
+ export async function shareMeal(prevState,formData){
     try{
       const meal = {
         title: formData.get('title'),
@@ -19,11 +17,12 @@ function isInvalidText(text){
       }
 
       if(isInvalidText(meal.title) || isInvalidText(meal.summary)|| isInvalidText(meal.instructions)|| isInvalidText(meal.creator)|| isInvalidText(meal.creator_email) || !meal.creator_email.includes('@')|| !meal.image || meal.image.size === 0){
-      throw  new Error('Invalid')
+       return {
+        message: 'Invalid response'
+       }
       }
-  
+
       await saveMeal(meal);
-      redirect('/meals');
     }catch(err){
       console.log(err)
     }

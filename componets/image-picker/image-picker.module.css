@@ -6,7 +6,8 @@
   }
   
   .picker .input {
-    display: none;
+    width: 0;
+    opacity: 0;
   }
   
   .picker .button {
