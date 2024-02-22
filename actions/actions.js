@@ -1,5 +1,7 @@
 'use server';
 import { saveMeal } from "@/lib/meals";
+import { revalidatePath } from 'next/cache'
+
 function isInvalidText(text){
   return !text || text.trim() === ''
 }
@@ -23,6 +25,7 @@ function isInvalidText(text){
       }
 
       await saveMeal(meal);
+      revalidatePath("/meals")
     }catch(err){
       console.log(err)
     }
