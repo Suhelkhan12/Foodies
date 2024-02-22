@@ -3,6 +3,17 @@ import { getSingleMeal } from '@/lib/meals'
 import {notFound } from 'next/navigation'
 import classes from './page.module.css'
 
+export async function generateMetadata({params}){
+  const meal =  getSingleMeal(params.mealSlug);
+  if(!meal){
+    notFound()
+   }
+  return {
+    title: meal.title,
+    description:meal.summary
+  };
+}
+
 const page = ({params}) => {
    const meal =  getSingleMeal(params.mealSlug)
    
